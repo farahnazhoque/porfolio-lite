@@ -4,8 +4,11 @@ import Image from "next/image";
 import { useScramble } from "use-scramble";
 import { useState } from "react";
 
-function ScrambleText({ text, onComplete }: { text: string; onComplete?: () => void }) {
-  const { ref } = useScramble({
+function ScrambleText({ text, onComplete, onHover }: { text: string; onComplete?: () => void; onHover?: boolean }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const { ref, replay } = useScramble({
     text,
     speed: 0.5,
     tick: 1,
@@ -13,9 +16,30 @@ function ScrambleText({ text, onComplete }: { text: string; onComplete?: () => v
     scramble: 5,
     seed: 0,
     onAnimationEnd: onComplete,
+    playOnMount: !onHover, // Only play on mount if not hover-triggered
   });
 
-  return <span ref={ref} />;
+  const handleMouseEnter = () => {
+    if (onHover) {
+      setIsHovered(true);
+      replay();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (onHover) {
+      setIsHovered(false);
+    }
+  };
+
+  return (
+    <span 
+      ref={ref} 
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className={onHover ? "cursor-pointer" : ""}
+    />
+  );
 }
 
 export default function Home() {
@@ -29,12 +53,17 @@ export default function Home() {
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] relative">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{ backgroundImage: 'url(/background.gif)' }} />
         <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start relative z-10">
-        <h1 className="text-4xl font-bold font-apple-garamond text-white  ">
+        <h1 className="text-4xl font-bold font-apple-garamond text-white mb-0">
           <ScrambleText text="Hi, this is Farahnaz Hoque!" onComplete={handleScrambleComplete} />
         </h1>
+        <p className={`text-gray-200 text-md font-[family-name:var(--font-geist-mono)] transition-all duration-1000 ease-out delay-200 mt-0 ${
+          showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          fhoque1515@gmail.com
+        </p>
         
         {/* Image Gallery */}
-        <div className={`flex flex-col sm:flex-row gap-4 w-full max-w-4xl transition-all duration-1000 ease-out ${
+        <div className={`flex flex-col sm:flex-row gap-6 w-full max-w-4xl transition-all duration-1000 delay-200 ease-out ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <div className="flex-1">
@@ -42,8 +71,8 @@ export default function Home() {
               src='/image1.jpg'
               alt="Image 1"
               width={400}
-              height={300}
-              className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg"
+              height={400}
+              className="w-full h-80 object-cover rounded-lg shadow-lg"
             />
           </div>
           <div className="flex-1">
@@ -51,8 +80,8 @@ export default function Home() {
               src='/image2.jpg'
               alt="Image 2"
               width={400}
-              height={300}
-              className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg"
+              height={400}
+              className="w-full h-80 object-cover rounded-lg shadow-lg"
             />
           </div>
           <div className="flex-1">
@@ -60,11 +89,16 @@ export default function Home() {
               src='/image3.jpg'
               alt="Image 3"
               width={400}
-              height={300}
-              className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg"
+              height={400}
+              className="w-full h-80 object-cover rounded-lg shadow-lg"
             />
           </div>
         </div>
+        <p className={`text-gray-200 text-md font-[family-name:var(--font-geist-mono)] transition-all duration-1000 ease-out delay-200 mt-0 ${
+          showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <ScrambleText text="Currently: " onHover />
+        </p>
         
         <ol className={`list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)] transition-all duration-1000 ease-out delay-200 ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
