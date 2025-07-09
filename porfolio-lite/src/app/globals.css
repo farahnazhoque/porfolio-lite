@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Apple Garamond';
+  src: url('../../public/fonts/AppleGarmondFonts/AppleGaramond.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.font-apple-garamond {
+  font-family: 'Apple Garamond', sans-serif;
+}
+
+@font-face {
+  font-family: 'Apple Garamond Italic';
+  src: url('../../public/fonts/AppleGarmondFonts/AppleGaramond-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+.font-apple-garamond-italic {
+  font-family: 'Apple Garamond Italic', sans-serif;
+}
+
+@font-face {
+  font-family: 'Apple Garamond Bold Italic';
+  src: url('../../public/fonts/AppleGarmondFonts/AppleGaramond-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+.font-apple-garamond-bold-italic {
+  font-family: 'Apple Garamond Bold Italic', sans-serif;
+}
+
+@font-face {
+  font-family: 'Apple Garamond Bold';
+  src: url('../../public/fonts/AppleGarmondFonts/AppleGaramond-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-apple-garamond-bold {
+  font-family: 'Apple Garamond Bold', sans-serif;
+}
