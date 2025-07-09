@@ -141,23 +141,40 @@ export default function Home() {
             <span className="font-bold"><ScrambleText text="previously" onHover /></span>
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Left Column - Titles */}
-            <div className="space-y-4">
-              <h3 className="text-white font-apple-garamond font-semibold text-md">cs @ uci</h3>
-              <h3 className="text-white font-apple-garamond font-semibold text-md">website developer and designer @ soar uci</h3>
-              <h3 className="text-white font-apple-garamond font-semibold text-md">data science research intern @ joe c. wen school of population and public health</h3>
-              <h3 className="text-white font-apple-garamond font-semibold text-md">full stack developer for stand up to trash</h3>
-              <h3 className="text-white font-apple-garamond font-semibold text-md">ml research assistant @ donald bren school of information and computer sciences</h3>
+          <div className="flex flex-col gap-6 text-zinc-400 leading-snug">
+            <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
+              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">cs @ uci</div>
+              <ul className="col-span-2 list-disc ml-4 space-y-1">
+                <li className="text-gray-300 font-apple-garamond text-sm">Of all the undergrads at UCI, I was certainly one of them</li>
+              </ul>
             </div>
             
-            {/* Right Column - Descriptions */}
-            <div className="space-y-4">
-              <p className="text-gray-300 font-apple-garamond text-sm">Of all the undergrads at Stanford, I was certainly one of them</p>
-              <p className="text-gray-300 font-apple-garamond text-sm">Deferred freshman year to build Siri for realtors, because I had always wanted to help make my mom's work easier</p>
-              <p className="text-gray-300 font-apple-garamond text-sm">Backed by Pear VC</p>
-              <p className="text-gray-300 font-apple-garamond text-sm">Built Noora, a platform to help people with autism improve their social conversation</p>
-              <p className="text-gray-300 font-apple-garamond text-sm">And guest speak at a CS grad class</p>
+            <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
+              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">website developer and designer @ soar uci</div>
+              <ul className="col-span-2 list-disc ml-4 space-y-1">
+                <li className="text-gray-300 font-apple-garamond text-sm">Developed and designed websites for student organizations</li>
+              </ul>
+            </div>
+            
+            <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
+              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">data science research intern @ joe c. wen school of population and public health</div>
+              <ul className="col-span-2 list-disc ml-4 space-y-1">
+                <li className="text-gray-300 font-apple-garamond text-sm">Conducted research on population health data</li>
+              </ul>
+            </div>
+            
+            <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
+              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">full stack developer for stand up to trash</div>
+              <ul className="col-span-2 list-disc ml-4 space-y-1">
+                <li className="text-gray-300 font-apple-garamond text-sm">Built full-stack applications for environmental initiatives</li>
+              </ul>
+            </div>
+            
+            <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
+              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">ml research assistant @ donald bren school of information and computer sciences</div>
+              <ul className="col-span-2 list-disc ml-4 space-y-1">
+                <li className="text-gray-300 font-apple-garamond text-sm">Assisted with machine learning research projects</li>
+              </ul>
             </div>
           </div>
         </div>
