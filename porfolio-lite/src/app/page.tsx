@@ -52,9 +52,9 @@ export default function Home() {
   return (
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] relative">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{ backgroundImage: 'url(/background.gif)' }} />
-        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start relative z-10">
-        <h1 className="text-4xl font-bold font-apple-garamond text-white mb-0">
-          <ScrambleText text="Hi, this is Farahnaz Hoque!" onComplete={handleScrambleComplete} />
+        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start relative z-10 w-full max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold font-apple-garamond text-white mb-0 text-center sm:text-left">
+          <ScrambleText text="hi, this is farahnaz hoque!" onComplete={handleScrambleComplete} />
         </h1>
         <p className={`text-gray-200 text-md font-[family-name:var(--font-geist-mono)] transition-all duration-1000 ease-out delay-200 mt-0 ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -63,7 +63,7 @@ export default function Home() {
         </p>
         
         {/* Image Gallery */}
-        <div className={`flex flex-col sm:flex-row gap-6 w-full max-w-4xl transition-all duration-1000 delay-200 ease-out ${
+        <div className={`flex flex-col sm:flex-row gap-6 max-w-4xl mx-auto transition-all duration-1000 delay-200 ease-out ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <div className="flex-1">
@@ -94,24 +94,38 @@ export default function Home() {
             />
           </div>
         </div>
-        <p className={`text-gray-200 text-md font-[family-name:var(--font-geist-mono)] transition-all duration-1000 ease-out delay-200 mt-0 ${
+        <p className={`text-gray-200 text-md font-[family-name:var(--font-geist-mono)] font-semibold transition-all duration-1000 ease-out delay-200 mt-0 mb-2 ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          <ScrambleText text="Currently: " onHover />
+          <ScrambleText text="who am i?" onHover />
+          <br />
+          <p className="text-gray-200 text-sm font-normal font-[family-name:var(--font-geist-mono)] transition-all duration-1000 ease-out delay-200 mt-0 mb-2">the future does not need more “human-like” machines, it needs more humane tools. i am not interested in replacing empathy and creativity with algorithms; instead, my mission lies in redesigning the systems that have quietly harmed us, so they can finally serve us.</p>
+          <p className="text-gray-200 text-sm font-normal font-[family-name:var(--font-geist-mono)] transition-all duration-1000 ease-out delay-200 mt-0 mb-2">i build systems and software that uplift human dignity, not mimic it, at the edges where automation helps, not replaces. i am an advocate for ethical tech with experience across higher education, research, and industry. with a background in b.s. in computer science and a minor in health informatics from the university of california, irvine, as a recent graduate, i am in a journey to fuse engineering with accountability and charity.</p>
+        </p>
+        <p className={`text-gray-200 text-md font-[family-name:var(--font-geist-mono)] font-semibold transition-all duration-1000 ease-out delay-200 mt-0 ${
+          showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <ScrambleText text="currently: " onHover />
         </p>
         
         <ol className={`list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)] transition-all duration-1000 ease-out delay-200 ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
+            developing an intelligent tool for{" "}
+            <a
+              href="https://conicgroup.com/" // <-- replace with the actual URL
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-[family-name:var(--font-geist-mono)] text-white font-semibold"
+            >
+              <ScrambleText text="conic" onHover />
+              <span className="ml-1">↗</span>
+            </a>
+            , which can be utilized by founders and Civic Leaders to make curated decisions based on their unique goals and resources.
           </li>
           <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
+            musing about creating a new fascility that refines and researches procedures for Intelligent Systems to work for humanity, not against it.
           </li>
         </ol>
 
