@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { useScramble } from "use-scramble";
+import { useState } from "react";
 
-function ScrambleText({ text }: { text: string }) {
+function ScrambleText({ text, onComplete }: { text: string; onComplete?: () => void }) {
   const { ref } = useScramble({
     text,
     speed: 0.5,
@@ -11,19 +12,63 @@ function ScrambleText({ text }: { text: string }) {
     step: 1,
     scramble: 5,
     seed: 0,
+    onAnimationEnd: onComplete,
   });
 
   return <span ref={ref} />;
 }
 
 export default function Home() {
+  const [showContent, setShowContent] = useState(false);
+
+  const handleScrambleComplete = () => {
+    setShowContent(true);
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1 className="text-4xl font-bold font-apple-garamond">
-          <ScrambleText text="Hi, this is Farahnaz Hoque!" />
+      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] relative">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{ backgroundImage: 'url(/background.gif)' }} />
+        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start relative z-10">
+        <h1 className="text-4xl font-bold font-apple-garamond text-white  ">
+          <ScrambleText text="Hi, this is Farahnaz Hoque!" onComplete={handleScrambleComplete} />
         </h1>
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+        
+        {/* Image Gallery */}
+        <div className={`flex flex-col sm:flex-row gap-4 w-full max-w-4xl transition-all duration-1000 ease-out ${
+          showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <div className="flex-1">
+            <Image
+              src='/image1.jpg'
+              alt="Image 1"
+              width={400}
+              height={300}
+              className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="flex-1">
+            <Image
+              src='/image2.jpg'
+              alt="Image 2"
+              width={400}
+              height={300}
+              className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="flex-1">
+            <Image
+              src='/image3.jpg'
+              alt="Image 3"
+              width={400}
+              height={300}
+              className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+        
+        <ol className={`list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)] transition-all duration-1000 ease-out delay-200 ${
+          showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
@@ -36,7 +81,9 @@ export default function Home() {
           </li>
         </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        <div className={`flex gap-4 items-center flex-col sm:flex-row transition-all duration-1000 ease-out delay-400 ${
+          showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
           <a
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -62,7 +109,9 @@ export default function Home() {
           </a>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+        <footer className={`row-start-3 flex gap-[24px] flex-wrap items-center justify-center relative z-10 transition-all duration-1000 ease-out delay-600 ${
+          showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
