@@ -12,9 +12,10 @@ function ScrambleText({ text, onComplete, onHover }: { text: string; onComplete?
     text,
     speed: 0.5,
     tick: 1,
-    step: 1,
+    step: 3,
     scramble: 5,
-    seed: 0,
+    seed: 2,
+    range: [65, 125],
     onAnimationEnd: onComplete,
     playOnMount: !onHover, // Only play on mount if not hover-triggered
   });
@@ -51,16 +52,19 @@ export default function Home() {
 
   return (
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] relative">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{ backgroundImage: 'url(/background.gif)' }} />
+        <div className="bg absolute inset-0 -z-10" />
         <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start relative z-10 w-full max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold font-apple-garamond text-white mb-0 text-center sm:text-left">
           <ScrambleText text="hi, this is farahnaz hoque!" onComplete={handleScrambleComplete} />
         </h1>
-        <p className={`text-gray-200 text-md font-[family-name:var(--font-geist-mono)] transition-all duration-1000 ease-out delay-200 mt-0 ${
+        <p className={`text-gray-200 text-md font-apple-garamond transition-all duration-1000 ease-out delay-200 mt-0 ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          fhoque1515@gmail.com
-        </p>
+          <a href="mailto:fhoque1515@gmail.com" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold">
+            <ScrambleText text="fhoque1515@gmail.com" onHover />
+          </a>
+          <span className="ml-1">↗</span>
+        </p> 
         
         {/* Image Gallery */}
         <div className={`flex flex-col sm:flex-row gap-6 max-w-4xl mx-auto transition-all duration-1000 delay-200 ease-out ${
@@ -94,21 +98,20 @@ export default function Home() {
             />
           </div>
         </div>
-        <p className={`text-gray-200 text-md font-[family-name:var(--font-geist-mono)] font-semibold transition-all duration-1000 ease-out delay-200 mt-0 mb-2 ${
+        <p className={`text-gray-200 text-md  font-apple-garamond font-bold transition-all duration-1000 ease-out delay-200 mt-0 mb-2 ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          <ScrambleText text="who am i?" onHover />
+          <ScrambleText text="mission" onHover />
           <br />
-          <p className="text-gray-200 text-sm font-normal font-[family-name:var(--font-geist-mono)] transition-all duration-1000 ease-out delay-200 mt-0 mb-2">the future does not need more “human-like” machines, it needs more humane tools. i am not interested in replacing empathy and creativity with algorithms; instead, my mission lies in redesigning the systems that have quietly harmed us, so they can finally serve us.</p>
-          <p className="text-gray-200 text-sm font-normal font-[family-name:var(--font-geist-mono)] transition-all duration-1000 ease-out delay-200 mt-0 mb-2">i build systems and software that uplift human dignity, not mimic it, at the edges where automation helps, not replaces. i am an advocate for ethical tech with experience across higher education, research, and industry. with a background in b.s. in computer science and a minor in health informatics from the university of california, irvine, as a recent graduate, i am in a journey to fuse engineering with accountability and charity.</p>
+          <p className="text-gray-200 text-md font-normal font-apple-garamond transition-all duration-1000 ease-out delay-200 mt-0 mb-2">the future does not need more “human-like” machines, it needs more humane tools. i am not interested in replacing empathy and creativity with algorithms; instead, my mission lies in redesigning the systems that have quietly harmed us, so they can finally serve us.</p>
+          <p className="text-gray-200 text-md font-normal font-apple-garamond transition-all duration-1000 ease-out delay-200 mt-0 mb-2">i build systems and software that uplift human dignity, not mimic it, at the edges where automation helps, not replaces. i am an advocate for ethical tech with experience across <span className="font-bold">higher education, research, and industry</span>. with a background in <span className="font-bold">b.s. in computer science</span> and a minor in <span className="font-bold">health informatics</span> from the <a href="https://uci.edu/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold"> <ScrambleText text="university of california, irvine" onHover /> </a> <span className="ml-1">↗</span>, as a recent graduate, i am in a journey to fuse engineering with accountability and charity.</p>
         </p>
-        <p className={`text-gray-200 text-md font-[family-name:var(--font-geist-mono)] font-semibold transition-all duration-1000 ease-out delay-200 mt-0 ${
+        <p className={`text-gray-200 text-md font-apple-garamond transition-all duration-1000 ease-out delay-200 mt-0 ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          <ScrambleText text="currently: " onHover />
-        </p>
-        
-        <ol className={`list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)] transition-all duration-1000 ease-out delay-200 ${
+          <span className="font-bold"><ScrambleText text="currently: " onHover /></span>
+          <br></br>
+          <ol className={`list-inside list-decimal text-md text-center sm:text-left font-apple-garamond transition-all duration-1000 ease-out delay-200 ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <li className="mb-2 tracking-[-.01em]">
@@ -117,17 +120,49 @@ export default function Home() {
               href="https://conicgroup.com/" // <-- replace with the actual URL
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-[family-name:var(--font-geist-mono)] text-white font-semibold"
+              className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold"
             >
               <ScrambleText text="conic" onHover />
-              <span className="ml-1">↗</span>
+              
             </a>
-            , which can be utilized by founders and Civic Leaders to make curated decisions based on their unique goals and resources.
+            <span className="ml-1">↗</span>, which can be utilized by founders and Civic Leaders to make curated decisions based on their unique goals and resources.
           </li>
           <li className="tracking-[-.01em]">
-            musing about creating a new fascility that refines and researches procedures for Intelligent Systems to work for humanity, not against it.
+            musing about creating a new fascility that refines and researches procedures for intelligent systems to work for humanity, not against it.
           </li>
         </ol>
+        </p>
+        
+        {/* Previous Experience Section */}
+        <div className={`transition-all duration-1000 ease-out delay-300 ${
+          showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <p className="text-gray-200 text-md font-apple-garamond transition-all duration-1000 ease-out delay-200 mt-0 mb-4">
+            <span className="font-bold"><ScrambleText text="previously" onHover /></span>
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Left Column - Titles */}
+            <div className="space-y-4">
+              <h3 className="text-white font-apple-garamond font-semibold text-md">cs @ uci</h3>
+              <h3 className="text-white font-apple-garamond font-semibold text-md">website developer and designer @ soar uci</h3>
+              <h3 className="text-white font-apple-garamond font-semibold text-md">data science research intern @ joe c. wen school of population and public health</h3>
+              <h3 className="text-white font-apple-garamond font-semibold text-md">full stack developer for stand up to trash</h3>
+              <h3 className="text-white font-apple-garamond font-semibold text-md">ml research assistant @ donald bren school of information and computer sciences</h3>
+            </div>
+            
+            {/* Right Column - Descriptions */}
+            <div className="space-y-4">
+              <p className="text-gray-300 font-apple-garamond text-sm">Of all the undergrads at Stanford, I was certainly one of them</p>
+              <p className="text-gray-300 font-apple-garamond text-sm">Deferred freshman year to build Siri for realtors, because I had always wanted to help make my mom's work easier</p>
+              <p className="text-gray-300 font-apple-garamond text-sm">Backed by Pear VC</p>
+              <p className="text-gray-300 font-apple-garamond text-sm">Built Noora, a platform to help people with autism improve their social conversation</p>
+              <p className="text-gray-300 font-apple-garamond text-sm">And guest speak at a CS grad class</p>
+            </div>
+          </div>
+        </div>
+        
+        
 
         <div className={`flex gap-4 items-center flex-col sm:flex-row transition-all duration-1000 ease-out delay-400 ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
