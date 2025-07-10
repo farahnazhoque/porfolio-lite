@@ -66,24 +66,33 @@ export default function Home() {
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <div className="flex-1">
-            <img
+            <Image
               src='/image1.jpg'
               alt="Image 1"
+              width={400}
+              height={400}
               className="w-full h-30 sm:h-80 object-cover rounded-lg shadow-lg"
+              priority
             />
           </div>
           <div className="flex-1">
-            <img
+            <Image
               src='/image2.jpg'
               alt="Image 2"
+              width={400}
+              height={400}
               className="w-full h-30 sm:h-80 object-cover rounded-lg shadow-lg"
+              priority
             />
           </div>
           <div className="flex-1">
-            <img
+            <Image
               src='/image3.jpg'
               alt="Image 3"
+              width={400}
+              height={400}
               className="w-full h-30 sm:h-80 object-cover rounded-lg shadow-lg"
+              priority
             />
           </div>
         </div>
