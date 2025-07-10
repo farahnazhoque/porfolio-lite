@@ -158,13 +158,16 @@ export default function Home() {
               <ul className="col-span-2 list-disc ml-4 space-y-1">
                 <li className="text-gray-300 font-apple-garamond text-sm">developed and designed website for soar @ uci 0:1.</li>
                 <li className="text-gray-300 font-apple-garamond text-sm">worked with teams of student leaders, developing pages for each team, representing their mission, and highlighting their efforts to uplift marginalized communities at uci.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">resposible for the design and writing of e-newsletters, increasing the reach and number of recipients by 35%</li>
               </ul>
             </div>
             
             <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
-              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">data science research intern @ joe c. wen school of population and public health</div>
+              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">data science research intern @ <a href="https://drwulab.net/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold"> <ScrambleText text=" environmental health lab" onHover /> </a> <span className="ml-1">↗</span></div>
               <ul className="col-span-2 list-disc ml-4 space-y-1">
-                <li className="text-gray-300 font-apple-garamond text-sm">Conducted research on population health data</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">part of the joe c. wen school of population and public health at uci.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">developed a web-crawler to scrape the wildfires website and twitter for evacuation zones and orders across california that were highlighted during wildfires.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">analyzed and programmed an interactive map to visualize decade-long zone data for further research on trends surround air pollution and health.</li>
               </ul>
             </div>
 
