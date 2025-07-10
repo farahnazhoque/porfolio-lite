@@ -104,7 +104,7 @@ export default function Home() {
           <ScrambleText text="mission" onHover />
           <br />
           <p className="text-gray-200 text-md font-normal font-apple-garamond transition-all duration-1000 ease-out delay-200 mt-0 mb-2">we do not exist in a void, and neither do our ideas and the software we build. however, with the boom of artificial intelligence, we developers are building tools faster than ever, yet, the depth and the purpose behind them are getting lost in the capatilization of it all. as a result, we now have an influx of tools that are causing more detriment than welfare.</p>
-          <p className="text-gray-200 text-md font-normal font-apple-garamond transition-all duration-1000 ease-out delay-200 mt-0 mb-2">as a recent <span className="font-bold">computer science graduate</span> from the <a href="https://uci.edu/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold"> <ScrambleText text="university of california, irvine" onHover /> </a> <span className="ml-1">↗</span>, who has been part of development teams within <span className="font-bold">higher education, research, and industry</span> settings, and having closely worked with students, entrepreneurs, teachers, and non-profits, my observations are such that the intelligent systems that have infiltrated our spaces, and attempting to replace people in fields and roles that require empathy, understanding,  and charity, and we programmer know that no line of code can ever mimic those human conditions. 
+          <p className="text-gray-200 text-md font-normal font-apple-garamond transition-all duration-1000 ease-out delay-200 mt-0 mb-2">as a recent <span className="font-bold">computer science graduate</span> from the <a href="https://uci.edu/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold"> <ScrambleText text="university of california, irvine" onHover /> </a> <span className="ml-1">↗</span>, who has been part of development teams within <span className="font-bold">higher education, research, and industry</span> settings, and having closely worked with students, entrepreneurs, teachers, and non-profits, my observations are such that the intelligent systems that have infiltrated our spaces, are attempting to replace people in fields and roles that require empathy, understanding,  and charity, and we programmers know that no line of code can ever mimic those human conditions. 
         </p>
         <p className="text-gray-200 text-md font-normal font-apple-garamond transition-all duration-1000 ease-out delay-200 mt-0 mb-2">so, i am in a pursuit of creating tools and software that take out the tediousness human being are often required to do in order to get to the things they enjoy. that is to say, i wish to ensure that my craft can coexist and aid humans rather them take out of the equation which they are the core principle of.
         </p>
@@ -148,14 +148,16 @@ export default function Home() {
             <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
               <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">cs @ uci</div>
               <ul className="col-span-2 list-disc ml-4 space-y-1">
-                <li className="text-gray-300 font-apple-garamond text-sm">Of all the undergrads at UCI, I was certainly one of them</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">involved in research, student leadership, and teaching.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">minored in health informatics with a focus on health equity and social justice.</li>
               </ul>
             </div>
             
             <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
-              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">website developer and designer @ soar uci</div>
+              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">website developer and designer @ <a href="https://soar.uci.edu/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold"> <ScrambleText text="soar uci" onHover /> </a> <span className="ml-1">↗</span></div>
               <ul className="col-span-2 list-disc ml-4 space-y-1">
-                <li className="text-gray-300 font-apple-garamond text-sm">Developed and designed websites for student organizations</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">developed and designed website for soar @ uci 0:1.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">worked with teams of student leaders, developing pages for each team, representing their mission, and highlighting their efforts to uplift marginalized communities at uci.</li>
               </ul>
             </div>
             
@@ -163,6 +165,14 @@ export default function Home() {
               <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">data science research intern @ joe c. wen school of population and public health</div>
               <ul className="col-span-2 list-disc ml-4 space-y-1">
                 <li className="text-gray-300 font-apple-garamond text-sm">Conducted research on population health data</li>
+              </ul>
+            </div>
+
+            <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
+              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">program co-director @ soar uci</div>
+              <ul className="col-span-2 list-disc ml-4 space-y-1">
+                <li className="text-gray-300 font-apple-garamond text-sm">co-directed a program that taught high schoolers how to code and design.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">taught students how to code and design.</li>
               </ul>
             </div>
             
