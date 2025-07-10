@@ -174,22 +174,24 @@ export default function Home() {
             <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
               <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">program co-director @ soar uci</div>
               <ul className="col-span-2 list-disc ml-4 space-y-1">
-                <li className="text-gray-300 font-apple-garamond text-sm">advocated for and secured additional technological resources, such as 5 (total 12) extra laptops for low-income students to use for free, expanding access to essential services for low-income students, including technology and financial support, reducing 70% of barriers to their academic and personal success during COVID-19.</li>
-                <li className="text-gray-300 font-apple-garamond text-sm">foster partnerships with campus departments and external organizations, co-leading 10 programs within 2 years in collaborative efforts to create a more inclusive and comprehensive programs and workshops for students from diverse backgrounds at uci.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">secured additional technological resources, such as 5 (total 12) extra laptops, expanding access to essential services for low-income students, reducing 70% of barriers to their academic and personal success during COVID-19.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">co-led 10 programs and workshops within 2 years in collaborative efforts to create a more inclusive and comprehensive community and solutions for students from diverse backgrounds navigating higher education at uci.</li>
               </ul>
             </div>
             
             <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
-              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">full stack developer for stand up to trash</div>
+              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">full-stack developer for <a href="https://www.standuptotrash.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold"> <ScrambleText text="stand up to trash" onHover /> <span className="ml-1">↗</span></a></div>
               <ul className="col-span-2 list-disc ml-4 space-y-1">
-                <li className="text-gray-300 font-apple-garamond text-sm">Built full-stack applications for environmental initiatives</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">built a full-stack volunteer and trash management system 0:1 for all of orange county's beaches.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">managament system contributed to more informed decision-making for waste management and public health initiatives, helping track efforts in removing 8 million tons of plastic from the ocean annually.</li>
               </ul>
             </div>
             
             <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
-              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">ml research assistant @ donald bren school of information and computer sciences</div>
+              <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">ml research assistant @ <a href="https://iasl.ics.uci.edu/people/marco-levorato/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold"> <ScrambleText text="intelligent and autonomous systems lab" onHover /> <span className="ml-1">↗</span></a></div>
               <ul className="col-span-2 list-disc ml-4 space-y-1">
-                <li className="text-gray-300 font-apple-garamond text-sm">Assisted with machine learning research projects</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">part of the donald bren school of information and computer sciences at uci.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">assisted professor levorato with research surrounding privacy within internet of things devices.</li>
               </ul>
             </div>
           </div>
