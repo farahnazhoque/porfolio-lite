@@ -5,8 +5,6 @@ import { useScramble } from "use-scramble";
 import { useState } from "react";
 
 function ScrambleText({ text, onComplete, onHover }: { text: string; onComplete?: () => void; onHover?: boolean }) {
-  const [isHovered, setIsHovered] = useState(false);
-  const [hasAnimated, setHasAnimated] = useState(false);
 
   const { ref, replay } = useScramble({
     text,
@@ -22,15 +20,12 @@ function ScrambleText({ text, onComplete, onHover }: { text: string; onComplete?
 
   const handleMouseEnter = () => {
     if (onHover) {
-      setIsHovered(true);
       replay();
     }
   };
 
   const handleMouseLeave = () => {
-    if (onHover) {
-      setIsHovered(false);
-    }
+    // No action needed on mouse leave
   };
 
   return (
@@ -67,7 +62,7 @@ export default function Home() {
         </p> 
         
         {/* Image Gallery */}
-        <div className={`flex flex-col sm:flex-row gap-6 max-w-4xl mx-auto transition-all duration-1000 delay-200 ease-out ${
+        <div className={`flex flex-row gap-4 max-w-4xl mx-auto transition-all duration-1000 delay-200 ease-out ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <div className="flex-1">
@@ -76,7 +71,7 @@ export default function Home() {
               alt="Image 1"
               width={400}
               height={400}
-              className="w-full h-80 object-cover rounded-lg shadow-lg"
+              className="w-full h-30 sm:h-80 object-cover rounded-lg shadow-lg"
             />
           </div>
           <div className="flex-1">
@@ -85,7 +80,7 @@ export default function Home() {
               alt="Image 2"
               width={400}
               height={400}
-              className="w-full h-80 object-cover rounded-lg shadow-lg"
+              className="w-full h-30 sm:h-80 object-cover rounded-lg shadow-lg"
             />
           </div>
           <div className="flex-1">
@@ -94,7 +89,7 @@ export default function Home() {
               alt="Image 3"
               width={400}
               height={400}
-              className="w-full h-80 object-cover rounded-lg shadow-lg"
+              className="w-full h-30 sm:h-80 object-cover rounded-lg shadow-lg"
             />
           </div>
         </div>
@@ -114,7 +109,7 @@ export default function Home() {
         }`}>
           <span className="font-bold"><ScrambleText text="currently: " onHover /></span>
           <br></br>
-          <ol className={`list-inside list-decimal text-md text-center sm:text-left font-apple-garamond transition-all duration-1000 ease-out delay-200 ${
+          <ol className={`list-inside list-decimal text-md  sm:text-left font-apple-garamond transition-all duration-1000 ease-out delay-200 ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <li className="mb-2 tracking-[-.01em]">
@@ -182,8 +177,8 @@ export default function Home() {
             <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
               <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">full-stack developer for <a href="https://www.standuptotrash.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold"> <ScrambleText text="stand up to trash" onHover /> <span className="ml-1">↗</span></a></div>
               <ul className="col-span-2 list-disc ml-4 space-y-1">
-                <li className="text-gray-300 font-apple-garamond text-sm">built a full-stack volunteer and trash management system 0:1 for all of orange county's beaches.</li>
-                <li className="text-gray-300 font-apple-garamond text-sm">managament system contributed to more informed decision-making for waste management and public health initiatives, helping track efforts in removing 8 million tons of plastic from the ocean annually.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">built a full-stack volunteer and trash management system 0:1 for all of orange county&apos;s beaches.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">management system contributed to more informed decision-making for waste management and public health initiatives, helping track efforts in removing 8 million tons of plastic from the ocean annually.</li>
               </ul>
             </div>
             
