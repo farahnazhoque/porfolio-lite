@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  // optional for older Next.js versions:
+  experimental: { appDir: true },
+};
 
-export default nextConfig
+export default nextConfig;
