@@ -174,8 +174,8 @@ export default function Home() {
             <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
               <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">program co-director @ soar uci</div>
               <ul className="col-span-2 list-disc ml-4 space-y-1">
-                <li className="text-gray-300 font-apple-garamond text-sm">co-directed a program that taught high schoolers how to code and design.</li>
-                <li className="text-gray-300 font-apple-garamond text-sm">taught students how to code and design.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">advocated for and secured additional technological resources, such as 5 (total 12) extra laptops for low-income students to use for free, expanding access to essential services for low-income students, including technology and financial support, reducing 70% of barriers to their academic and personal success during COVID-19.</li>
+                <li className="text-gray-300 font-apple-garamond text-sm">foster partnerships with campus departments and external organizations, co-leading 10 programs within 2 years in collaborative efforts to create a more inclusive and comprehensive programs and workshops for students from diverse backgrounds at uci.</li>
               </ul>
             </div>
             
