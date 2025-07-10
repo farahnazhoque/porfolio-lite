@@ -61,7 +61,7 @@ export default function Home() {
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <a href="mailto:fhoque1515@gmail.com" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold">
-            <ScrambleText text="fhoque1515@gmail.com" onHover />
+            <ScrambleText text="fhoque1515@uci.edu" onHover />
           </a>
           <span className="ml-1">↗</span>
         </p> 
