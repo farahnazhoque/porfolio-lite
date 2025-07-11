@@ -192,87 +192,43 @@ export default function Home() {
                 <li className="text-gray-300 font-apple-garamond text-sm">assisted professor levorato with research surrounding privacy within internet of things devices.</li>
               </ul>
             </div>
+            
           </div>
         </div>
-        
-        
-
-        <div className={`flex gap-4 items-center flex-col sm:flex-row transition-all duration-1000 ease-out delay-400 ${
-          showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
       </main>
-        <footer className={`row-start-3 flex gap-[24px] flex-wrap items-center justify-center relative z-10 transition-all duration-1000 ease-out delay-600 ${
+        <footer className={`row-start-3 flex gap-[24px] font-apple-garamond text-white font-semibold font-underline flex-wrap items-center justify-center relative z-10 transition-all duration-1000 ease-out delay-600 ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+        <a href="https://www.linkedin.com/in/farahnazhoque/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold">
+         
+          <ScrambleText text="linkedin" onHover />
+          <span className="ml-1">↗</span>
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+       
+        <a href="https://github.com/farahnazhoque" target="_blank" rel="noopener noreferrer" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold">
+         
+          <ScrambleText text="gitrhub" onHover />
+          <span className="ml-1">↗</span>
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+       
+        <a href="https://farahnazhoque.tech" target="_blank" rel="noopener noreferrer" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold">
+         
+         <ScrambleText text="main portfolio" onHover />
+         <span className="ml-1">↗</span>
+       </a>
+       <a href="https://docs.google.com/document/d/1H5nMMazM4L4izmWehKXzhhD6GYs8ANdkw3DztmXM9sA/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold">
+         
+         <ScrambleText text="resume" onHover />
+         <span className="ml-1">↗</span>
+       </a>
+       <a href="https://farahnazhoque.substack.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold">
+         
+         <ScrambleText text="substack" onHover />
+         <span className="ml-1">↗</span>
+       </a>
+       <div className="text-gray-400 font-apple-garamond text-sm mt-4">
+         © 2025 Farahnaz Hoque. All rights reserved.
+       </div>
       </footer>
     </div>
   );
