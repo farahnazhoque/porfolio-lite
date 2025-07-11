@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Farahnaz Lite",
+  title: "Farahnaz Hoque",
   description: "Farahnaz Hoque's Portfolio Lite",
   icons: {
     icon: "/logo.png",
