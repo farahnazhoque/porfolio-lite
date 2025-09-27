@@ -189,23 +189,29 @@ export default function Home() {
             }`}
           >
             <li className="mb-2 tracking-[-.01em]">
-              developing an intelligent tool for{" "}
+              developing an all-in-one stop for founders and investors to find one another for{" "}
               <a
-                href="https://conicgroup.com/" // <-- replace with the actual URL
+                href="https://cherrypitch.ai/" // <-- replace with the actual URL
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold"
               >
                 <ScrambleText text="conic" onHover />
               </a>
-              <span className="ml-1">↗</span>, which can be utilized by
-              founders and Civic Leaders to make curated decisions based on
-              their unique goals and resources.
+              <span className="ml-1">↗</span>.
             </li>
             <li className="tracking-[-.01em]">
-              musing about creating a new fascility that refines and researches
-              procedures for intelligent systems to work for humanity, not
-              against it.
+              building an enterprise in the States as a foreign asscociate for {" "}
+              <a
+                href="https://infocrat.com.bd" // <-- replace with the actual URL
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold"
+              >
+                <ScrambleText text="infocrat" onHover />
+              </a>
+              <span className="ml-1">↗</span>.
+
             </li>
           </ol>
         </p>
@@ -225,20 +231,54 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col gap-6 text-zinc-400 leading-snug">
+   
+
             <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
               <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">
-                cs @ uci
+                software engineer @{" "}
+                <a
+                  href="https://conicgroup.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold"
+                >
+                  {" "}
+                  <ScrambleText text="conic" onHover />{" "}
+                </a>{" "}
+                <span className="ml-1">↗</span>
               </div>
+
               <ul className="col-span-2 list-disc ml-4 space-y-1">
                 <li className="text-gray-300 font-apple-garamond text-sm">
-                  involved in research, student leadership, and teaching.
+                  developed an intelligent tool from 0-100, that can be utilized by founders and civic leaders to make curated decisions based on their high-level goals.
                 </li>
                 <li className="text-gray-300 font-apple-garamond text-sm">
-                  minored in health informatics with a focus on health equity
-                  and social justice.
+                  trained and utilized vector database to ensure that the intelligent model was well-equipped with data and conic's unique consulting approaches, making the auto-generated actionable tasks more personalized to each organization's specific industries and clients.
+                </li>
+                <<li>
+                  architected a dashboard for each user, containing chat-history with the tool, the logic model designed, and a powerpoint presentation explaining the logic model for stakeholders.
+                </li>
+                <<li>
+                  shipped the application software to 15+ clients within 3 months.
                 </li>
               </ul>
             </div>
+
+            <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
+                <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">
+                  cs @ uc irvine
+                </div>
+                <ul className="col-span-2 list-disc ml-4 space-y-1">
+                  <li className="text-gray-300 font-apple-garamond text-sm">
+                    involved in research, student leadership, and teaching.
+                  </li>
+                  <li className="text-gray-300 font-apple-garamond text-sm">
+                    minored in health informatics with a focus on health equity
+                    and social justice.
+                  </li>
+                </ul>
+            </div>
+
 
             <div className="grid sm:grid-cols-3 sm:gap-20 gap-2">
               <div className="col-span-1 text-white font-apple-garamond font-semibold text-md">
