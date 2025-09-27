@@ -196,7 +196,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center underline underline-offset-4 decoration-white hover:opacity-80 font-apple-garamond text-white font-semibold"
               >
-                <ScrambleText text="conic" onHover />
+                <ScrambleText text="cherrypitch" onHover />
               </a>
               <span className="ml-1">↗</span>.
             </li>
