@@ -189,7 +189,7 @@ export default function Home() {
             }`}
           >
             <li className="mb-2 tracking-[-.01em]">
-              developing an all-in-one stop for founders and investors to find one another for{" "}
+              developing an all-in-one platform for founders and investors to find one another @ {" "}
               <a
                 href="https://cherrypitch.ai/" // <-- replace with the actual URL
                 target="_blank"
